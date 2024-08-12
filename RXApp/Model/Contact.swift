@@ -16,4 +16,9 @@ class Contact: Object, Identifiable {
     @Persisted var status: Bool = false
     @Persisted var story: Bool = false
     @Persisted var lastOnline: Date? = nil
+    @Persisted var number: String? = ""
+    @Persisted var twitter: String? = ""
+    @Persisted var instagram: String? = ""
+    @Persisted var linkedin: String? = ""
+    @Persisted var facebook: String? = ""
 }

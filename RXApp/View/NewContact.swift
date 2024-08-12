@@ -127,23 +127,28 @@ struct NewContact: View {
         contact.surname = surname
         contact.avatarPath = avatarURL?.absoluteString ?? "Avatar1"
 //        contact.flag = flag
-//        contact.number = number
-//        contact.twitter = twitter
-//        contact.instagram = instagram
-//        contact.linkedin = linkedin
-//        contact.facebook = facebook
+        contact.number = number
+        contact.twitter = twitter
+        contact.instagram = instagram
+        contact.linkedin = linkedin
+        contact.facebook = facebook
         
         try! realm.write {
             realm.add(contact)
         }
     }
     
-    private  func fetchCatImage() {
+    private func fetchCatImage(retries: Int = 3) {
         loadingCats { data, error in
             if let url = data {
                 avatarURL = url
+            } else if retries > 0 {
+                // Если произошла ошибка, и количество попыток больше нуля, пробуем еще раз
+                fetchCatImage(retries: retries - 1)
             } else {
+                // Обработка ошибки после всех попыток
                 print("Ошибка загрузки изображения кота: \(String(describing: error))")
+                // Можно добавить сообщение для пользователя или оставить стандартный аватар
             }
         }
     }

@@ -9,13 +9,16 @@ import SwiftUI
 
 struct ContactsView: View {
     @State private var newContact = false // Состояние для управления переходом
+    @State var path = [Contact]()
+    @State private var searchText = ""
+
     
     var body: some View {
         NavigationStack {
             VStack {
                 
-                SearchBar() // Здесь должна быть реализация поиска
-                ContactsListView() // Вывод списка контактов из базы данных Realm
+                SearchBar(searchText: $searchText) 
+                ContactsListView(searchText: searchText) // Вывод списка контактов из базы данных Realm
                     .padding(.leading, 15)
                     .listStyle(.inset)
                 

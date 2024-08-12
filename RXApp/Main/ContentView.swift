@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var searchText = ""
+//    @State private var searchText = ""
     @StateObject private var viewModel = ContactsViewModel()
     
     var body: some View {

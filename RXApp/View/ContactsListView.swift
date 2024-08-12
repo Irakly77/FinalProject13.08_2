@@ -10,12 +10,21 @@ import RealmSwift
 
 struct ContactsListView: View {
     @ObservedResults(Contact.self) var contacts
+    var searchText: String
+    
+    var filteredContacts: Results<Contact> {
+        if searchText.isEmpty {
+            return contacts
+        } else {
+            return contacts.filter("name CONTAINS[c] %@", searchText)
+        }
+    }
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(contacts) { contact in
-                    HStack {
+                ForEach(filteredContacts) { contact in
+                    NavigationLink(destination: ProfileAccountView(contact: contact)) {
                         ContactRow(contact: contact)
                     }
                 }
@@ -23,21 +32,21 @@ struct ContactsListView: View {
             }
         }
     }
-        
-        private func deleteContact(at offsets: IndexSet) {
-            let realm = try! Realm()
-            offsets.map { contacts[$0] }.forEach { contact in
-                try! realm.write {
-                    realm.delete(contact)
-                }
+    
+    private func deleteContact(at offsets: IndexSet) {
+        let realm = try! Realm()
+        offsets.map { contacts[$0] }.forEach { contact in
+            try! realm.write {
+                realm.delete(contact)
             }
         }
-        
+    }
+    
     
 }
 
-struct ContactsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContactsListView()
-    }
-}
+//struct ContactsListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContactsListView()
+//    }
+//}

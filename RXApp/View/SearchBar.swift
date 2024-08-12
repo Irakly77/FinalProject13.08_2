@@ -7,7 +7,7 @@
 import SwiftUI
 import Foundation
 struct SearchBar: View {
-    @State private var searchText = ""
+    @Binding var searchText: String
     var body: some View {
         ZStack(alignment: .leading) {
             TextField("Search", text: $searchText)
@@ -21,9 +21,6 @@ struct SearchBar: View {
                 .foregroundColor(.gray)
                 .padding(.leading, 8) // Отступ для иконки лупы
         }
-       
-        
-        
     }
 }
 
