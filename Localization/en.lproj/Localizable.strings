@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  RXApp
+
+  Created by Ульяна Евстигнеева on 12.08.2024.
+  
+*/
+
+"Communicate with friends and family easily" = "Communicate with friends and family easily";
+"By clicking continue I agree to" =  "By clicking continue i agree to";
+"the Privacy Policy" = "the Privacy Policy";
+"and" = "and";
+"Terms of Use" = "Terms of Use";
+"Start chatting" = "Start chatting";
+
+"Enter your phone number" =  "Enter your phone number";
+"We will send a confirmation code to the number provided" = "We will send a confirmation code to the number provided";
+"Continue" =  "Continue";
+
+"Enter a code" = "Enter the code";
+"Sent a code to the number" = "Sent a code to the number";
+"Request code again" = "Request code again";
+
+"Contacts" = "Contacts";
+"Search" = "Search";
+
+"New Contact" = "New Contact";
+"Name(Necessarily)" = "Name(Necessarily)";
+"Surname(Necessarily)" = "Surname(Necessarily)";
+"Save contact" = "Save contact";
+
+"Take a break from work chats and watch cats" = "Take a break from work chats and watch cats";
+"The Other Cat" = "The Other Cat";
+
