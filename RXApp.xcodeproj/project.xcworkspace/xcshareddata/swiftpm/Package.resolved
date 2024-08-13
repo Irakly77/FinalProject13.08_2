@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "realm-cocoa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-cocoa.git",
+      "state" : {
+        "revision" : "71bddc82c4fe3dd6488739ff8b7e99f69183a614",
+        "version" : "10.38.0"
+      }
+    },
+    {
+      "identity" : "realm-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-core.git",
+      "state" : {
+        "revision" : "e56380f05793998dfea0d87a34b68fdba475961c",
+        "version" : "13.9.0"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift",
+      "state" : {
+        "revision" : "c8742ed97fc2f0c015a5ea5eddefb064cd7532d2",
+        "version" : "6.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

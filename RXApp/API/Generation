@@ -1,0 +1,15 @@
+MODULE="APICats/Sources/APICats/"
+
+openapi-generator generate -i "json-converter.yaml" -g swift5 -o "catsapi"
+
+# Создаем директорию, если она не существует
+mkdir -p $MODULE
+
+# Очищаем существующее содержимое директории
+rm -r $MODULE"*" || true
+
+# Копируем сгенерированные файлы в нужную директорию
+cp -R "catsapi/OpenAPIClient/Classes/OpenAPIs/". $MODULE
+
+# Удаляем временную директорию сгенерированных файлов
+rm -r "catsapi"
