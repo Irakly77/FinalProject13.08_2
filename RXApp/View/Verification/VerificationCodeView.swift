@@ -33,7 +33,7 @@ struct VerificationCodeView: View {
             Button(action: {
                 enteredCode = ""
             }) {
-                Text("Запросить код повторно")
+                Text("Request code again")
                     .foregroundStyle(Color("wbButton"))
             }
             .padding(.bottom, 50)

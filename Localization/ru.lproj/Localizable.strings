@@ -7,7 +7,7 @@
 */
 
 "Communicate with friends and family easily" = "Общайтесь с друзьями и близкими легко";
-"By clicking continue i agree to" =  "Нажимая кнопку продолжить я соглашаюсь с";
+"By clicking continue I agree to" =  "Нажимая кнопку продолжить я соглашаюсь с";
 "the Privacy Policy" = "Политикой Конфиденциальности";
 "and" = "и";
 "Terms of Use" = "Условиями Использования";
@@ -21,10 +21,13 @@
 "Sent a code to the number" = "Отправили код на номер";
 "Request code again" = "Запросить код повторно";
 
-"Contacts" = "Contacts";
-"Search" = "Search";
+"Contacts" = "Контакты";
+"Search" = "Поиск";
 
 "New Contact" = "Новый контакт";
 "Name(Necessarily)" = "Имя(обязательно)";
-"Surname(Necessarily)" = "Фамилия(обязательно)";
+"Surname(Optional)" = "Фамилия(опционально)";
+"Save contact" = "Сохранить контакт";
 
+"Take a break from work chats and watch cats" = "Отдохни от рабочих чатов и посмотри на котов";
+"The Other Cat" = "Другой кот";

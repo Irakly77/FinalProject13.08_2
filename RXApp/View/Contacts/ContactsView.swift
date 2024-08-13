@@ -23,7 +23,7 @@ struct ContactsView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Text("Контакты")
+                    Text("Contacts")
                         .font(.system(size:18))
                         .foregroundStyle(Color("wbFont"))
                         .bold()

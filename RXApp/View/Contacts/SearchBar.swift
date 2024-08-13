@@ -13,9 +13,10 @@ struct SearchBar: View {
             TextField("Search", text: $searchText)
                 .padding(.leading, 30) // Добавляем место для иконки лупы
                 .padding(6)
-                .background(Color("wbSearchFont"))
+                .foregroundStyle(Color("wbSearchFont"))
                 .cornerRadius(4)
                 .frame(width: 327, height: 36)
+                .background(RoundedRectangle(cornerRadius: 4).fill(Color("wbTint")))
             
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray)
@@ -27,3 +28,4 @@ struct SearchBar: View {
 //#Preview {
 //    SearchBar()
 //}
+

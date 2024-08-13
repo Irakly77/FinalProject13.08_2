@@ -30,32 +30,4 @@ class ContactsViewModel: ObservableObject {
             )
             .store(in: &cancellables)
     }
-    
-    // оставить, если захотим удалять контакты
-    func deleteFirstContact() {
-        if let firstContact = contacts.first {
-            do {
-                try dataSource.deleteContact(firstContact)
-            } catch {
-                print("Ошибка при удалении контакта: \(error.localizedDescription)")
-            }
-        }
-    }
-    
-    // оставить, если будем изменять существующие контакты
-    func updateFirstContactName(to newName: String) {
-        if let firstContact = contacts.first {
-            do {
-                try dataSource.updateContact(firstContact, with: newName)
-            } catch {
-                print("Ошибка при обновлении контакта: \(error.localizedDescription)")
-            }
-        }
-    }
-    
-    // реализовать поиск 
-    func searchContact(by name: String) {
-        let searchResults = dataSource.searchContact(by: name)
-        print(searchResults)
-    }
 }

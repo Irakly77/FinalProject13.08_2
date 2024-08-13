@@ -71,6 +71,7 @@
 		AF5313182C6A585800CE5356 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313172C6A585800CE5356 /* NumberView.swift */; };
 		AF53131A2C6A58C300CE5356 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5313192C6A58C300CE5356 /* CodeView.swift */; };
 		AF5313222C6A888D00CE5356 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF5313242C6A888D00CE5356 /* Localizable.strings */; };
+		AF53132E2C6BA91E00CE5356 /* ViewRandomCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53132D2C6BA91E00CE5356 /* ViewRandomCat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,7 @@
 		AF5313192C6A58C300CE5356 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		AF5313232C6A888D00CE5356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AF5313252C6A889100CE5356 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AF53132D2C6BA91E00CE5356 /* ViewRandomCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRandomCat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 				A3E1C41D2C6932950024EEF0 /* RXAppApp.swift */,
 				A3F369852C6A1BE500FEE29F /* TabBar.swift */,
 				A3E1C41F2C6932950024EEF0 /* ContentView.swift */,
+				AF53132D2C6BA91E00CE5356 /* ViewRandomCat.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 		A3F369892C6A33F000FEE29F /* Avatar */ = {
 			isa = PBXGroup;
 			children = (
+				A310381C2C6B3819005405C1 /* RandomCat.swift */,
 				A3E1C4392C693CF10024EEF0 /* ImageLoader.swift */,
 				A3E1C43F2C6942FA0024EEF0 /* PersonNoAvatar.swift */,
 				A310381E2C6B4334005405C1 /* AvatarView.swift */,
@@ -319,7 +323,6 @@
 				A3F369892C6A33F000FEE29F /* Avatar */,
 				AF53130E2C6A550700CE5356 /* Verification */,
 				AF53130D2C6A54EA00CE5356 /* Contacts */,
-				A310381C2C6B3819005405C1 /* RandomCat.swift */,
 				A31038242C6B45FC005405C1 /* ProfileDetailView */,
 			);
 			path = View;
@@ -502,6 +505,7 @@
 				A3F369712C6A10DB00FEE29F /* CatRandom200Response.swift in Sources */,
 				A3E1C43E2C6942D80024EEF0 /* ContactRow.swift in Sources */,
 				A3F369752C6A10DB00FEE29F /* ApiSecuritySignIn200Response.swift in Sources */,
+				AF53132E2C6BA91E00CE5356 /* ViewRandomCat.swift in Sources */,
 				A3F369802C6A10DB00FEE29F /* JSONDataEncoding.swift in Sources */,
 				A3F3697B2C6A10DB00FEE29F /* AdminCatsBrowse200ResponseInner.swift in Sources */,
 				AF5313182C6A585800CE5356 /* NumberView.swift in Sources */,

@@ -21,28 +21,13 @@ struct ContactsListView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(filteredContacts) { contact in
+            List(filteredContacts) { contact in
                     NavigationLink(destination: ProfileAccountView(contact: contact)) {
                         ContactRow(contact: contact)
                     }
                     .listRowBackground(Color.clear)
-                }
-                .onDelete(perform: deleteContact)
             }
             .scrollContentBackground(.hidden)
-        }
-    }
-    
-    private func deleteContact(at offsets: IndexSet) {
-        let realm = try! Realm()
-        offsets.map { contacts[$0] }.forEach { contact in
-            try! realm.write {
-                realm.delete(contact)
-            }
-        }
     }
 }
-
 

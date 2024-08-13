@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UISystem
 
 struct RandomCat: View {
     @Binding var catURL: URL?
@@ -26,17 +27,13 @@ struct RandomCat: View {
                     .frame(width: 100, height: 101)
             }
         } else {
-            // Отображение аватара по умолчанию
-            Button(action: {
-                fetchCatImage() // Загрузка изображения кота при нажатии на аватар
-            }) {
                 Image("Avatar1")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100, height: 101)
-            }
         }
     }
+    
     private func fetchCatImage(retries: Int = 3) {
         loadingCats { data, error in
             if let url = data {

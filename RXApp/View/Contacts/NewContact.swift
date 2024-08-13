@@ -32,8 +32,8 @@ struct NewContact: View {
             Spacer()
             
             Group {
-                createTextField(placeholder: "Имя (обязательно)", text: $name)
-                createTextField(placeholder: "Фамилия (опционально)", text: $surname)
+                createTextField(placeholder: NSLocalizedString("Name(Necessarily)", comment: ""), text: $name)
+                createTextField(placeholder: NSLocalizedString("Surname(Optional)",comment: ""), text: $surname)
                 createEmailField()
                 createTextField(placeholder: "twitter", text: $twitter)
                 createTextField(placeholder: "@instagram", text: $instagram)
@@ -42,7 +42,7 @@ struct NewContact: View {
                 
             }
             .padding(.bottom, 25)
-            ButtonWBView(title: "Сохранить контакт", action: {
+            ButtonWBView(title: "Save contact", action: {
                 saveContact()
                 presentationMode.wrappedValue.dismiss()
             }, buttonColor: Color("wbButton"))
@@ -56,7 +56,7 @@ struct NewContact: View {
                 }) {
                     HStack {
                         Image(systemName: "arrow.left")
-                        Text("Новый контакт")
+                        Text("New Contact")
                     }
                 }
                 .bold()
