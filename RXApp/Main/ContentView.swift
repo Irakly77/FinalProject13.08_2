@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @State private var searchText = ""
+
     @StateObject private var viewModel = ContactsViewModel()
     
     var body: some View {
-        TabBar()
+        WalkthroughView()
             .onAppear {
                 viewModel.loadContacts()
             }
@@ -21,9 +21,9 @@ struct ContentView: View {
 
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
 

@@ -6,23 +6,42 @@
 //
 
 import SwiftUI
+
+enum Tabs: Hashable {
+    case user
+    case cat
+}
+
+
 struct TabBar: View {
+    @State private var internalSelectedTab: Tabs = .user
+    private var selectedTab: Binding<Tabs> {
+        Binding(
+            get: {
+                .user
+            },
+            set: {
+                self.internalSelectedTab = $0
+            }
+        )
+    }
+    
     var body: some View {
-        TabView {
-            ContactsView()
-                .tabItem {
-                    Image(systemName: "person.2")
-                }
-//            Chats()
-//                .tabItem {
-//                    Image(systemName: "message")
-//                }
-//            Other()
-//                .tabItem {
-//                    Image(systemName: "ellipsis")
-//                }
+        TabView(selection: selectedTab) {
+            ContactsView().tabItem {
+                Image(internalSelectedTab != .user ? "user" : "userselected")
+            }.tag(Tabs.user)
+            RandomCat(catURL: .constant(nil)).tabItem {
+                Image(internalSelectedTab != .cat ? "cat" : "catSelected")
+            }.tag(Tabs.cat)
         }
     }
 }
 
+
+struct TabBar_Preview: PreviewProvider {
+    static var previews: some View {
+        TabBar()
+    }
+}
 

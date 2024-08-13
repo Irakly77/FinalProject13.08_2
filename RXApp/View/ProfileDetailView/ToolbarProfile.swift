@@ -20,11 +20,11 @@ struct ToolbarProfile: View {
                             .font(.system(size: 12))
                             .bold()
                             .padding(.leading, 16)
-                            .foregroundColor(Color("fontColor"))
+                            .foregroundColor(Color("wbFont"))
                         Text("Профиль")
                             .font(.system(size: 18))
                             .bold()
-                            .foregroundColor(Color("fontColor"))
+                            .foregroundColor(Color("wbFont"))
                             .padding()
                     }
                 }

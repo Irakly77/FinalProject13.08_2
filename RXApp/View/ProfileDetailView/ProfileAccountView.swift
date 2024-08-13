@@ -11,7 +11,7 @@ struct ProfileAccountView: View {
     let contact: Contact
     var body: some View {
         ZStack {
-            Color("backgroundColor").ignoresSafeArea()
+            Color("wbBG").ignoresSafeArea()
             VStack() {
                 AvatarView(contact: contact, localizationAvatar: "profile")
                     .padding(20)
@@ -35,6 +35,7 @@ struct ProfileAccountView: View {
             .padding(.top, -220)
             ToolbarProfile()
         }
+        .navigationBarBackButtonHidden()
     }
     
     func button(_ image: String) -> some View {
@@ -48,7 +49,7 @@ struct ProfileAccountView: View {
         .buttonStyle(PlainButtonStyle())
         .background(Color.clear)
         .frame(width: 72, height: 40)
-        .overlay(Capsule().stroke(Color("brandButtonColor"), lineWidth: 4))
+        .overlay(Capsule().stroke(Color("wbButton"), lineWidth: 4))
         .cornerRadius(25)
     }
     
